@@ -50,15 +50,16 @@ export default function HomeSection() {
           >
             <div className="relative w-full h-[420px] flex items-center justify-center">
               {/* MAIN IMAGE (center layer) */}
-              <Image
-                src="/assets/developer-illustration.webp"
-                alt="Developer Illustration"
-                width={400}
-                height={400}
-                priority
-                className="z-10"
-              />
-
+              <div className="relative w-[400px] h-[400px]">
+                <Image
+                  src="/assets/developer-illustration.webp"
+                  alt="Developer Illustration"
+                  fill
+                  priority
+                  sizes="400px"
+                  className="object-contain z-10"
+                />
+              </div>
               {/* ICON 1 */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2">
                 <motion.div
@@ -77,6 +78,7 @@ export default function HomeSection() {
                     src="/assets/js-bg.webp"
                     alt="JS"
                     fill
+                    sizes="(max-width: 640px) 48px, (max-width: 1024px) 64px, 80px"
                     className="object-contain"
                   />
                 </motion.div>
@@ -100,6 +102,7 @@ export default function HomeSection() {
                     src="/assets/nodejs.jpg"
                     alt="JS"
                     fill
+                    sizes="(max-width: 640px) 48px, (max-width: 1024px) 64px, 80px"
                     className="object-contain"
                   />
                 </motion.div>
@@ -123,6 +126,7 @@ export default function HomeSection() {
                     src="/assets/react.png"
                     alt="JS"
                     fill
+                    sizes="(max-width: 640px) 48px, (max-width: 1024px) 64px, 80px"
                     className="object-contain"
                   />
                 </motion.div>
@@ -146,6 +150,7 @@ export default function HomeSection() {
                     src="/assets/next-js.png"
                     alt="JS"
                     fill
+                    sizes="(max-width: 640px) 48px, (max-width: 1024px) 64px, 80px"
                     className="object-contain"
                   />
                 </motion.div>
@@ -168,6 +173,7 @@ export default function HomeSection() {
                     src="/assets/jenkins.svg"
                     alt="JS"
                     fill
+                    sizes="(max-width: 640px) 48px, (max-width: 1024px) 64px, 80px"
                     className="object-contain"
                   />
                 </motion.div>

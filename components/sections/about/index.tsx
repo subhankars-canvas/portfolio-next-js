@@ -18,6 +18,9 @@ export default function About() {
     >
       <div className="container mx-auto px-8">
         <div className="flex justify-center flex-wrap">
+          <p className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">
+            Who Am I? Where I have contributed so far?
+          </p>
           <p className="text-center mt-6">
             Frontend Engineer with 10+ years of experience leading teams,
             building projects from scratch to production, and delivering
