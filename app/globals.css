@@ -122,11 +122,22 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
     font-family: var(--font-sans);
   }
   html {
     @apply font-sans;
     scroll-behavior: smooth;
+  }
+  #home {
+    @apply bg-background text-foreground;
+  }
+  #project {
+    @apply bg-background text-foreground;
+  }
+  #about {
+    @apply bg-foreground text-background;
+  }
+  #contact {
+    @apply bg-foreground text-background;
   }
 }

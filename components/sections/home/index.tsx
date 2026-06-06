@@ -6,8 +6,8 @@ import { TypeAnimation } from 'react-type-animation'
 
 export default function HomeSection() {
   return (
-    <section id="home" className="min-h-screen scroll-mt-20 flex items-center">
-      <div className="container mx-auto px-8">
+    <section id="home" className="min-h-auto scroll-mt-20 flex items-center">
+      <div className="container mx-auto my-8 px-8">
         <div className="grid items-center gap-10 md:grid-cols-2">
           {/* Left Side */}
           <motion.div
@@ -15,32 +15,30 @@ export default function HomeSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div>
-              <p className="mb-2 text-lg text-muted-foreground">Hello, I'm</p>
+            <p className="mb-2 text-lg text-muted-foreground">Hello, I'm</p>
 
-              <h1 className="mb-4 text-5xl font-bold md:text-7xl">
-                Subhankar Roy
-              </h1>
-              <TypeAnimation
-                sequence={['Frontend Developer', 2000]}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-                className="mb-6 text-2xl text-primary md:text-3xl"
-              />
+            <h1 className="mb-4 text-5xl font-bold md:text-7xl">
+              Subhankar Roy
+            </h1>
+            <TypeAnimation
+              sequence={['Frontend Developer', 2000]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+              className="mb-6 text-2xl text-primary md:text-3xl"
+            />
 
-              <p className="mb-8 max-w-xl text-muted-foreground">
-                I build modern web applications using React, Next.js,
-                TypeScript, and Tailwind CSS.
-              </p>
+            <p className="mb-8 max-w-xl text-muted-foreground">
+              I build modern web applications using React, Next.js, TypeScript,
+              and Tailwind CSS.
+            </p>
 
-              <div className="flex gap-4">
-                <button className="rounded-md bg-primary px-6 py-3 text-primary-foreground">
-                  Contact Me
-                </button>
+            <div className="flex gap-4">
+              <button className="rounded-md bg-primary px-6 py-3 text-primary-foreground">
+                Contact Me
+              </button>
 
-                <button className="rounded-md border px-6 py-3">Resume</button>
-              </div>
+              <button className="rounded-md border px-6 py-3">Resume</button>
             </div>
           </motion.div>
           {/* Right Side */}
@@ -48,70 +46,135 @@ export default function HomeSection() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex justify-end"
           >
-            <div className="flex justify-center">
-              <div className="absolute top-100 right-1/3 h-35 w-35 rounded-full bg-primary/10" />
+            <div className="relative w-full h-[420px] flex items-center justify-center">
+              {/* MAIN IMAGE (center layer) */}
               <Image
                 src="/assets/developer-illustration.webp"
                 alt="Developer Illustration"
-                width={550}
-                height={550}
+                width={400}
+                height={400}
                 priority
-                className="h-auto w-full max-w-lg"
+                className="z-10"
               />
+
+              {/* ICON 1 */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2">
+                <motion.div
+                  animate={{
+                    y: [0, -8, 0],
+                    transition: {
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    },
+                  }}
+                  whileHover="hover"
+                  className="relative h-16 w-16 rounded-full bg-primary/10"
+                >
+                  <Image
+                    src="/assets/js-bg.webp"
+                    alt="JS"
+                    fill
+                    className="object-contain"
+                  />
+                </motion.div>
+              </div>
+
+              {/* ICON 2 */}
+              <div className="absolute top-10 left-1/8">
+                <motion.div
+                  animate={{
+                    y: [0, -10, 0],
+                    transition: {
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    },
+                  }}
+                  whileHover="hover"
+                  className="relative h-16 w-16 rounded-full bg-primary/10"
+                >
+                  <Image
+                    src="/assets/nodejs.jpg"
+                    alt="JS"
+                    fill
+                    className="object-contain"
+                  />
+                </motion.div>
+              </div>
+
+              {/* ICON 3 */}
+              <div className="absolute top-12 right-10">
+                <motion.div
+                  animate={{
+                    y: [0, -11, 0],
+                    transition: {
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    },
+                  }}
+                  whileHover="hover"
+                  className="relative h-16 w-16 rounded-full bg-primary/10"
+                >
+                  <Image
+                    src="/assets/react.png"
+                    alt="JS"
+                    fill
+                    className="object-contain"
+                  />
+                </motion.div>
+              </div>
+
+              {/* ICON 4 */}
+              <div className="absolute bottom-1 right-13">
+                <motion.div
+                  animate={{
+                    y: [0, -8, 0],
+                    transition: {
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    },
+                  }}
+                  whileHover="hover"
+                  className="relative h-16 w-16 rounded-full bg-primary/10"
+                >
+                  <Image
+                    src="/assets/next-js.png"
+                    alt="JS"
+                    fill
+                    className="object-contain"
+                  />
+                </motion.div>
+              </div>
+              {/* ICON 5 */}
+              <div className="absolute bottom-5 left-14">
+                <motion.div
+                  animate={{
+                    x: [0, -8, 0],
+                    transition: {
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    },
+                  }}
+                  whileHover="hover"
+                  className="relative h-16 w-16 rounded-full bg-primary/10"
+                >
+                  <Image
+                    src="/assets/jenkins.svg"
+                    alt="JS"
+                    fill
+                    className="object-contain"
+                  />
+                </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>
-        <motion.div
-          animate={{
-            y: [0, -8, 0],
-            transition: {
-              duration: 3,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            },
-          }}
-          whileHover="hover"
-        >
-          <div className="flex justify-start gap-20 flex-wrap">
-            <div className="relative h-20 w-20 rounded-full bg-primary/10">
-              <Image
-                src="/assets/react.png"
-                alt="React"
-                fill
-                sizes="100px"
-                className="object-cover"
-              />
-            </div>
-            <div className="relative h-20 w-20 rounded-full bg-primary/10">
-              <Image
-                src="/assets/next-js.png"
-                alt="Next"
-                fill
-                sizes="100px"
-                className="object-cover"
-              />
-            </div>
-            <div className="relative h-20 w-20 rounded-full bg-primary/10">
-              <Image
-                src="/assets/js-bg.webp"
-                alt="Javascript"
-                fill
-                sizes="100px"
-                className="object-cover"
-              />
-            </div>
-            <div className="relative h-20 w-20 rounded-full bg-primary/10">
-              <Image
-                src="/assets/nodejs.jpg"
-                alt="Node"
-                fill
-                sizes="100px"
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )
