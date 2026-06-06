@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
 
 export default function HomeSection() {
-  // const text = 'Frontend Developer'
   return (
     <section id="home" className="min-h-screen scroll-mt-20 flex items-center">
       <div className="container mx-auto px-8">
@@ -51,37 +50,7 @@ export default function HomeSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="flex justify-center">
-              {/** Only Desktop view */}
-              <div className="hidden md:block">
-                <div className="relative bottom-20 left-20 h-20 w-20 rounded-full bg-primary/10">
-                  <Image
-                    src="/assets/react.png"
-                    alt="React"
-                    fill
-                    sizes="100px" // just for reference does not have any effects
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative bottom-40 left-60 h-20 w-20 rounded-full bg-primary/10">
-                  <Image
-                    src="/assets/nodejs.jpg"
-                    alt="React"
-                    fill
-                    sizes="100px"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative bottom-20 left-10 h-20 w-20 overflow-hidden rounded-full">
-                  <Image
-                    src="/assets/js-bg.webp"
-                    alt="React"
-                    fill
-                    sizes="100px"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="absolute top-1/2 right-1/3 h-35 w-35 rounded-full bg-primary/5" />
-              </div>
+              <div className="absolute top-100 right-1/3 h-35 w-35 rounded-full bg-primary/10" />
               <Image
                 src="/assets/developer-illustration.webp"
                 alt="Developer Illustration"
@@ -93,6 +62,56 @@ export default function HomeSection() {
             </div>
           </motion.div>
         </div>
+        <motion.div
+          animate={{
+            y: [0, -8, 0],
+            transition: {
+              duration: 3,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            },
+          }}
+          whileHover="hover"
+        >
+          <div className="flex justify-start gap-20 flex-wrap">
+            <div className="relative h-20 w-20 rounded-full bg-primary/10">
+              <Image
+                src="/assets/react.png"
+                alt="React"
+                fill
+                sizes="100px"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative h-20 w-20 rounded-full bg-primary/10">
+              <Image
+                src="/assets/next-js.png"
+                alt="Next"
+                fill
+                sizes="100px"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative h-20 w-20 rounded-full bg-primary/10">
+              <Image
+                src="/assets/js-bg.webp"
+                alt="Javascript"
+                fill
+                sizes="100px"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative h-20 w-20 rounded-full bg-primary/10">
+              <Image
+                src="/assets/nodejs.jpg"
+                alt="Node"
+                fill
+                sizes="100px"
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
