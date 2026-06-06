@@ -21,9 +21,9 @@ export function MobileNav() {
 
       <SheetContent>
         <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-        <nav className="flex flex-col gap-4">
+        <nav className="flex flex-col gap-4 m-2 p-2">
           <SheetClose asChild>
-            <a href="#home">Home</a>
+            <a href="/">Home</a>
           </SheetClose>
 
           <SheetClose asChild>

@@ -33,7 +33,7 @@ export default function ProjectDetailsCard({
     >
       {alignment === 'right' ? (
         <>
-          <div className="grid md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2">
             <div>{projectDescription}</div>
             <div>
               <Card className="relative mx-auto w-full max-w-sm pt-0">
@@ -69,7 +69,7 @@ export default function ProjectDetailsCard({
         </>
       ) : (
         <>
-          <div className="grid md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2">
             <div>
               <Card className="relative mx-auto w-full max-w-sm pt-0">
                 <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
