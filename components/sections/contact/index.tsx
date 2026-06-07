@@ -49,7 +49,7 @@ export default function Contact() {
                 alt="Indian Flag"
                 width={16}
                 height={16}
-                className="inline-block mx-2"
+                className="inline-block mx-2 w-4 h-3"
               />
             </div>
             <p className="mt-4">{leftDescription}</p>
