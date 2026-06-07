@@ -1,0 +1,18 @@
+{
+  "component": "contact",
+  "leftHeading": "Subhankar Roy.",
+  "leftSubHeading": "FullStack Developer. AI-driven development.",
+  "leftSubHeadingCountryIcon": "india-flag.png",
+  "leftDescription": "I help businesses build scalable, user-focused digital products through modern web technologies and AI-driven innovation. With 10+ years of experience in full-stack development and 5+ years of engineering leadership, I specialize in React.js, Node.js, JavaScript, and delivering high-quality products in Agile environments.",
+  "RightConnectString": "Let's connect",
+  "RightConnectMediums": [
+    { "icon": "Mail", "message": "Email" },
+    { "icon": "FileUser", "message": "Resume" },
+    { "icon": "UserRound", "message": "LinkedIn" },
+    { "icon": "UserRound", "message": "GitHub" }
+  ],
+  "copyrightSectionHeading": "2026 Subhankar Roy. All rights reserved.",
+  "effortStacks": "Built with &#x2764;&#xFE0F; and Next Js(UI & BFF), Shadcn/UI(UI components), Tailwind CSS, Nest Js(API) over a weekend.",
+  "termsLabel": "Terms & conditions",
+  "privacyLabel": "Privacy policy"
+}

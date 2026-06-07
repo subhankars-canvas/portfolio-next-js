@@ -2,25 +2,15 @@
 
 import { motion } from 'framer-motion'
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { FlaskConical, Code, Cpu } from 'lucide-react'
-import useCounter from '@/hooks/useCounter'
+import { Card } from '@/components/ui/card'
+
 import ProjectDetailsCard from '@/components/sections/sub-sections/project-details-card'
 import ProjectContentService from '@/services/projectsContent.service'
+import InsightWidgets from '@/components/sections/sub-sections/insight-widgets'
 
 export default function Project() {
   const { heading, description, projectInsightsWidgets, starProjectsData } =
     ProjectContentService()
-  const convertIconsToComponent = (icon: string) => {
-    if (icon === 'FlaskConical') {
-      return <FlaskConical />
-    } else if (icon === 'Code') {
-      return <Code />
-    } else {
-      return <Cpu />
-    }
-  }
-  console.log(starProjectsData)
   return (
     <motion.section
       initial={{ opacity: 0, y: 10 }}
@@ -45,31 +35,7 @@ export default function Project() {
                 className="w-full sm:w-auto sm:max-w-sm border bg-black text-white shadow-[0_20px_60px_rgba(0,0,0,0.2)]
                  hover:shadow-xl transition-all duration-300"
               >
-                <CardHeader>
-                  <div className="flex justify-center flex-row gap-4">
-                    {convertIconsToComponent(widget?.icon)}
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-center mt-2">
-                    <motion.h1
-                      onViewportEnter={() => useCounter(widget?.count)?.start()}
-                      onViewportLeave={() => useCounter(widget?.count)?.start()}
-                      viewport={{ amount: 0.5 }}
-                      className="text-4xl font-bold"
-                    >
-                      <motion.span>
-                        {useCounter(widget?.count)?.rounded}
-                      </motion.span>
-                      <span>+</span>
-                    </motion.h1>
-                  </CardTitle>
-                  <hr className="my-2 border-t border-gray-200 dark:border-white/10" />
-                </CardHeader>
-
-                <CardContent>
-                  <p className="text-center text-sm text-gray-300">
-                    {widget?.message}
-                  </p>
-                </CardContent>
+                <InsightWidgets widget={widget} />
               </Card>
             )
           })}

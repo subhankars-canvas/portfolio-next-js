@@ -4,8 +4,30 @@ import { Mail, FileUser, UserRound, Copyright } from 'lucide-react'
 import { Item, ItemContent, ItemMedia, ItemTitle } from '@/components/ui/item'
 import Image from 'next/image'
 import Link from 'next/link'
+import ContactContentService from '@/services/contactContent.service'
 
 export default function Contact() {
+  const {
+    leftHeading,
+    leftSubHeading,
+    leftSubHeadingCountryIcon,
+    leftDescription,
+    RightConnectString,
+    RightConnectMediums,
+    copyrightSectionHeading,
+    effortStacks,
+    termsLabel,
+    privacyLabel,
+  } = ContactContentService()
+  const getMediumIcon = (iconName: string) => {
+    if (iconName === 'Mail') {
+      return <Mail />
+    } else if (iconName === 'FileUser') {
+      return <FileUser />
+    } else {
+      return <UserRound />
+    }
+  }
   return (
     <motion.section
       initial={{ opacity: 0, y: 10 }}
@@ -18,64 +40,37 @@ export default function Contact() {
         <div className="flex w-full justify-start gap-4 flex-col md:flex-row">
           <div className="w-full md:w-2/3">
             <p className="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">
-              Subhankar Roy.
+              {leftHeading}
             </p>
             <div className="text-sm text-muted-foreground leading-relaxed mt-2">
-              FullStack Developer. AI-driven development.
+              {leftSubHeading}
               <Image
-                src="/assets/india-flag.png"
+                src={`/assets/${leftSubHeadingCountryIcon}`}
                 alt="Indian Flag"
                 width={16}
                 height={16}
                 className="inline-block mx-2"
               />
             </div>
-            <p className="mt-4">
-              I help businesses build scalable, user-focused digital products
-              through modern web technologies and AI-driven innovation. With 10+
-              years of experience in full-stack development and 5+ years of
-              engineering leadership, I specialize in React.js, Node.js,
-              JavaScript, and delivering high-quality products in Agile
-              environments.
-            </p>
+            <p className="mt-4">{leftDescription}</p>
           </div>
           <div className="w-full md:w-1/3">
             <p className="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">
-              Let's connect
+              {RightConnectString}
             </p>
             <div className="mt-4">
-              <Item>
-                <ItemMedia variant="icon">
-                  <Mail />
-                </ItemMedia>
-                <ItemContent>
-                  <ItemTitle>Email</ItemTitle>
-                </ItemContent>
-              </Item>
-              <Item>
-                <ItemMedia variant="icon">
-                  <FileUser />
-                </ItemMedia>
-                <ItemContent>
-                  <ItemTitle>Resume</ItemTitle>
-                </ItemContent>
-              </Item>
-              <Item>
-                <ItemMedia variant="icon">
-                  <UserRound />
-                </ItemMedia>
-                <ItemContent>
-                  <ItemTitle>LinkedIn</ItemTitle>
-                </ItemContent>
-              </Item>
-              <Item>
-                <ItemMedia variant="icon">
-                  <UserRound />
-                </ItemMedia>
-                <ItemContent>
-                  <ItemTitle>GitHub</ItemTitle>
-                </ItemContent>
-              </Item>
+              {RightConnectMediums?.map((medium, i) => {
+                return (
+                  <Item key={i + 1}>
+                    <ItemMedia variant="icon">
+                      {getMediumIcon(medium?.icon)}
+                    </ItemMedia>
+                    <ItemContent>
+                      <ItemTitle>{medium?.message}</ItemTitle>
+                    </ItemContent>
+                  </Item>
+                )
+              })}
             </div>
           </div>
         </div>
@@ -87,27 +82,27 @@ export default function Contact() {
               size={15}
             />
             <p className="text-sm text-muted-foreground leading-relaxed mx-2">
-              2026 Subhankar Roy. All rights reserved.
+              {copyrightSectionHeading}
             </p>
           </div>
           <div className="flex flex-1 justify-center text-center">
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Built with &#x2764;&#xFE0F; and Next Js(UI & BFF), Shadcn/UI(UI
-              components), Tailwind CSS, Nest Js(API) over a weekend.
-            </p>
+            <p
+              className="text-sm text-muted-foreground leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: effortStacks }}
+            />
           </div>
           <div className="flex flex-1 justify-end flex-wrap md:flex-nowrap">
             <Link
               href="#tnc"
               className="px-2 mx-2 text-sm text-muted-foreground leading-relaxed"
             >
-              Terms & conditions
+              {termsLabel}
             </Link>
             <Link
               href="#privacy"
               className="px-2 mx-2 text-sm text-muted-foreground leading-relaxed"
             >
-              Privacy policy
+              {privacyLabel}
             </Link>
           </div>
         </div>
