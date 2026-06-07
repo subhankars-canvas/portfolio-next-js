@@ -33,10 +33,10 @@ export default function ProjectDetailsCard({
     >
       {alignment === 'right' ? (
         <>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 md:grid-cols-2">
             <div>{projectDescription}</div>
             <div>
-              <Card className="relative mx-auto w-full max-w-sm pt-0">
+              <Card className="relative mx-auto w-full max-w-full sm:max-w-sm pt-0">
                 <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
                 <Image
                   src={`/assets/${projectImage}`}
@@ -54,12 +54,12 @@ export default function ProjectDetailsCard({
               </Card>
             </div>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-2 sm:gap-4 flex-wrap">
             {projectTechStacks?.map((item, i) => {
               return (
                 <div
                   key={i + 1}
-                  className="mt-4 text-sm leading-none font-small border border-[oklch(0.145_0_0)] rounded-[10px] py-1 px-3"
+                  className="mt-4 text-xs sm:text-sm leading-none font-small border border-[oklch(0.145_0_0)] rounded-[10px] py-1 px-2 sm:px-3 whitespace-nowrap"
                 >
                   {item}
                 </div>
@@ -69,9 +69,9 @@ export default function ProjectDetailsCard({
         </>
       ) : (
         <>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 md:grid-cols-2">
             <div>
-              <Card className="relative mx-auto w-full max-w-sm pt-0">
+              <Card className="relative mx-auto w-full max-w-full sm:max-w-sm pt-0">
                 <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
                 <Image
                   src={`/assets/${projectImage}`}
@@ -90,12 +90,12 @@ export default function ProjectDetailsCard({
             </div>
             <div>{projectDescription}</div>
           </div>
-          <div className="flex gap-4 justify-end">
+          <div className="flex gap-2 sm:gap-4 flex-wrap justify-end">
             {projectTechStacks?.map((item, i) => {
               return (
                 <div
                   key={i + 1}
-                  className="mt-4 text-sm leading-none font-small border border-[oklch(0.145_0_0)] rounded-[10px] py-1 px-3"
+                  className="mt-4 text-xs sm:text-sm leading-none font-small border border-[oklch(0.145_0_0)] rounded-[10px] py-1 px-2 sm:px-3 whitespace-nowrap"
                 >
                   {item}
                 </div>

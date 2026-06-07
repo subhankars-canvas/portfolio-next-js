@@ -21,6 +21,7 @@ export default function Navbar() {
             height={40}
             sizes="48px"
             className="rounded-md"
+            style={{ width: 'auto', height: 'auto' }}
             priority
           />
           <span className="font-bold text-xl hidden sm:block">

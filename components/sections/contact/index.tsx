@@ -14,9 +14,9 @@ export default function Contact() {
       className="min-h-auto scroll py-8"
       id="contact"
     >
-      <div className="container mx-auto px-8">
-        <div className="flex w-full justify-start gap-4">
-          <div className="w-2/3">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
+        <div className="flex w-full justify-start gap-4 flex-col md:flex-row">
+          <div className="w-full md:w-2/3">
             <p className="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">
               Subhankar Roy.
             </p>
@@ -32,7 +32,7 @@ export default function Contact() {
               environments.
             </p>
           </div>
-          <div className="w-1/3">
+          <div className="w-full md:w-1/3">
             <p className="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">
               Let's connect
             </p>
@@ -73,8 +73,8 @@ export default function Contact() {
           </div>
         </div>
         <hr className="my-6 border-t border-gray-200 dark:border-white/10" />
-        <div className="flex gap-4 w-full">
-          <div className="flex flex-1 justify-start">
+        <div className="flex gap-4 w-full flex-col md:flex-row">
+          <div className="flex flex-1 justify-start text-center md:text-left">
             <Copyright
               className="text-sm text-muted-foreground leading-relaxed mx-[2px] my-[2px]"
               size={15}
@@ -83,13 +83,13 @@ export default function Contact() {
               2026 Subhankar Roy. All rights reserved.
             </p>
           </div>
-          <div className="flex flex-1 justify-center">
+          <div className="flex flex-1 justify-center text-center">
             <p className="text-sm text-muted-foreground leading-relaxed">
               Built with &#x2764;&#xFE0F; and Next Js(UI & BFF), Shadcn/UI(UI
               components), Tailwind CSS, Nest Js(API) over a weekend.
             </p>
           </div>
-          <div className="flex flex-1 justify-end">
+          <div className="flex flex-1 justify-end flex-wrap md:flex-nowrap">
             <Link
               href="#tnc"
               className="px-2 mx-2 text-sm text-muted-foreground leading-relaxed"

@@ -16,7 +16,7 @@ export default function About() {
       className="min-h-auto scroll py-8"
       id="about"
     >
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <div className="flex justify-center flex-wrap">
           <p className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">
             Who Am I? Where I have contributed so far?
@@ -33,11 +33,11 @@ export default function About() {
           </p>
         </div>
         <hr className="my-6 border-t border-gray-200 dark:border-white/10" />
-        <div className="flex justify-center flex-wrap gap-8">
+        <div className="flex justify-center flex-wrap gap-4 sm:gap-6 md:gap-8">
           <Card
             className="relative bg-white shadow-lg border border-gray-100
                  shadow-[0_20px_60px_rgba(59,130,246,0.25)]
-                 hover:shadow-xl transition-all duration-300 w-full max-w-sm"
+                 hover:shadow-xl transition-all duration-300 w-full sm:w-auto sm:max-w-sm"
           >
             <div className="absolute top-1 right-3 text-sm bg-[oklch(0.145_0_0)] text-white border border-[oklch(0.145_0_0)] rounded-[10px] px-3">
               {' '}

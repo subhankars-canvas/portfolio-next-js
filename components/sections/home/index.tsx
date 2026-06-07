@@ -7,8 +7,8 @@ import { TypeAnimation } from 'react-type-animation'
 export default function HomeSection() {
   return (
     <section id="home" className="min-h-auto scroll-mt-20 flex items-center">
-      <div className="container mx-auto my-8 px-8">
-        <div className="grid items-center gap-10 md:grid-cols-2">
+      <div className="container mx-auto my-8 px-4 sm:px-6 md:px-8">
+        <div className="grid items-center gap-6 sm:gap-8 md:gap-10 grid-cols-1 md:grid-cols-2">
           {/* Left Side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -17,7 +17,7 @@ export default function HomeSection() {
           >
             <p className="mb-2 text-lg text-muted-foreground">Hello, I'm</p>
 
-            <h1 className="mb-4 text-5xl font-bold md:text-7xl">
+            <h1 className="mb-4 text-3xl sm:text-5xl md:text-7xl font-bold">
               Subhankar Roy
             </h1>
             <TypeAnimation
@@ -25,7 +25,7 @@ export default function HomeSection() {
               wrapper="span"
               speed={50}
               repeat={Infinity}
-              className="mb-6 text-2xl text-primary md:text-3xl"
+              className="mb-6 text-xl sm:text-2xl md:text-3xl text-primary"
             />
 
             <p className="mb-8 max-w-xl text-muted-foreground">
@@ -33,12 +33,14 @@ export default function HomeSection() {
               and Tailwind CSS.
             </p>
 
-            <div className="flex gap-4">
-              <button className="rounded-md bg-primary px-6 py-3 text-primary-foreground">
+            <div className="flex gap-2 sm:gap-4 flex-wrap">
+              <button className="rounded-md bg-primary px-4 sm:px-6 py-2 sm:py-3 text-primary-foreground text-sm sm:text-base">
                 Contact Me
               </button>
 
-              <button className="rounded-md border px-6 py-3">Resume</button>
+              <button className="rounded-md border px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base">
+                Resume
+              </button>
             </div>
           </motion.div>
           {/* Right Side */}
@@ -46,11 +48,11 @@ export default function HomeSection() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-end"
+            className="hidden md:flex justify-end"
           >
-            <div className="relative w-full h-[420px] flex items-center justify-center">
+            <div className="relative w-full h-[300px] sm:h-[350px] md:h-[420px] flex items-center justify-center">
               {/* MAIN IMAGE (center layer) */}
-              <div className="relative w-[400px] h-[400px]">
+              <div className="relative w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px]">
                 <Image
                   src="/assets/developer-illustration.webp"
                   alt="Developer Illustration"
@@ -61,7 +63,7 @@ export default function HomeSection() {
                 />
               </div>
               {/* ICON 1 */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 hidden sm:block">
                 <motion.div
                   animate={{
                     y: [0, -8, 0],
@@ -85,7 +87,7 @@ export default function HomeSection() {
               </div>
 
               {/* ICON 2 */}
-              <div className="absolute top-10 left-1/8">
+              <div className="absolute top-10 left-1/8 hidden sm:block">
                 <motion.div
                   animate={{
                     y: [0, -10, 0],
@@ -109,7 +111,7 @@ export default function HomeSection() {
               </div>
 
               {/* ICON 3 */}
-              <div className="absolute top-12 right-10">
+              <div className="absolute top-12 right-10 hidden sm:block">
                 <motion.div
                   animate={{
                     y: [0, -11, 0],
@@ -133,7 +135,7 @@ export default function HomeSection() {
               </div>
 
               {/* ICON 4 */}
-              <div className="absolute bottom-1 right-13">
+              <div className="absolute bottom-1 right-13 hidden sm:block">
                 <motion.div
                   animate={{
                     y: [0, -8, 0],
@@ -156,7 +158,7 @@ export default function HomeSection() {
                 </motion.div>
               </div>
               {/* ICON 5 */}
-              <div className="absolute bottom-5 left-14">
+              <div className="absolute bottom-5 left-14 hidden sm:block">
                 <motion.div
                   animate={{
                     x: [0, -8, 0],

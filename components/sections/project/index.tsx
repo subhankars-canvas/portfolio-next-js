@@ -23,7 +23,7 @@ export default function Project() {
       className="min-h-auto scroll py-8"
       id="project"
     >
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <div className="flex justify-center flex-wrap">
           <p className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">
             Project insights
@@ -39,9 +39,9 @@ export default function Project() {
           </p>
         </div>
         <hr className="my-6 border-t border-foreground dark:border-foreground" />
-        <div className="flex justify-center flex-wrap gap-8">
+        <div className="flex justify-center flex-wrap gap-4 sm:gap-6 md:gap-8">
           <Card
-            className="w-auto max-w-sm border bg-black text-white shadow-[0_20px_60px_rgba(0,0,0,0.2)]
+            className="w-full sm:w-auto sm:max-w-sm border bg-black text-white shadow-[0_20px_60px_rgba(0,0,0,0.2)]
                  hover:shadow-xl transition-all duration-300"
           >
             <CardHeader>
@@ -125,7 +125,7 @@ export default function Project() {
             </CardContent>
           </Card>
         </div>
-        <div className="grid mt-8">
+        <div className="grid mt-4 sm:mt-6 md:mt-8">
           <ProjectDetailsCard
             alignment="left"
             projectImage="car-rental.png"
@@ -142,7 +142,7 @@ export default function Project() {
             ]}
           />
         </div>
-        <div className="grid mt-8">
+        <div className="grid mt-4 sm:mt-6 md:mt-8">
           <ProjectDetailsCard
             alignment={'right'}
             projectImage="banking-project.jpg"
@@ -159,7 +159,7 @@ export default function Project() {
             ]}
           />
         </div>
-        <div className="grid mt-8">
+        <div className="grid mt-4 sm:mt-6 md:mt-8">
           <ProjectDetailsCard
             alignment={'left'}
             projectImage="retail-project.webp"
