@@ -1,0 +1,57 @@
+{
+  "component": "projects",
+  "heading": "Projects insights",
+  "description": "Iam a full-stack developer with experience building applications end-to-end—from development to deployment using CI/CD pipelines. I have worked with technologies like React, TypeScript, Tailwind CSS, Adobe Experience Manager on the frontend, and Node.js, NestJS, and PHP on the backend. Since 2015, I have been delivering scalable solutions and leveraging AI tools to accelerate development and automation.",
+  "projectInsightsWidgets": [
+    {
+      "count": 20,
+      "message": "Enterprise collaborated",
+      "icon": "FlaskConical"
+    },
+    {
+      "count": 5,
+      "message": "Sectors explored",
+      "icon": "Code"
+    },
+    {
+      "count": 15,
+      "message": "Tech hands on",
+      "icon": "Cpu"
+    }
+  ],
+  "starProjectsData": [
+    {
+      "alignment": "left",
+      "image": "car-rental.png",
+      "name": "WhiteLabel",
+      "subHeading": "A mobility web app of avis budget group for booking rental cars and tours accorss in globe.",
+      "description": "Leading the frontend architecture of a global travel and mobility platform, I build scalable React solutions powering tour, holiday, and reservation experiences for international partners. From designing reusable AEM-driven component systems to orchestrating complex multi-stage booking flows and payment integrations, I focus on delivering high-performance, maintainable products that accelerate business growth and enhance customer journeys worldwide.",
+      "techstacks": [
+        "AEM",
+        "React.Js",
+        "Jest",
+        "API Integration",
+        "Google OTP MFA",
+        "Jenkins",
+        "Claude AI",
+        "Bitbucket",
+        "SCSS"
+      ]
+    },
+    {
+      "alignment": "right",
+      "image": "banking-project.jpg",
+      "name": "HSBC Banking & Offers",
+      "subHeading": "An banking webapp responsible for offer generation through campaigns and user transaction validation tool.",
+      "description": "As a Senior Software Engineer in the banking and financial services domain, I developed enterprise-grade React applications powering offer management campaigns and transaction validation systems. I drove frontend architecture decisions, mentored developers through code reviews, and promoted modern engineering practices including automated testing, performance optimization, and maintainable component design. Working in an agile environment, I helped deliver secure, scalable, and business-critical solutions that enhanced customer engagement and operational efficiency.",
+      "techstacks": [
+        "React.Js",
+        "Webpack",
+        "API Integration",
+        "Jenkins",
+        "Bitbucket",
+        "Storybook"
+      ]
+    }
+  ]
+}

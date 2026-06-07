@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import { Mail, FileUser, UserRound, Copyright } from 'lucide-react'
 import { Item, ItemContent, ItemMedia, ItemTitle } from '@/components/ui/item'
-import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Contact() {
@@ -20,9 +20,16 @@ export default function Contact() {
             <p className="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">
               Subhankar Roy.
             </p>
-            <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+            <div className="text-sm text-muted-foreground leading-relaxed mt-2">
               FullStack Developer. AI-driven development.
-            </p>
+              <Image
+                src="/assets/india-flag.png"
+                alt="Indian Flag"
+                width={16}
+                height={16}
+                className="inline-block mx-2"
+              />
+            </div>
             <p className="mt-4">
               I help businesses build scalable, user-focused digital products
               through modern web technologies and AI-driven innovation. With 10+

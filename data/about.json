@@ -1,0 +1,34 @@
+{
+  "component": "about",
+  "heading": "Who Am I? Where I have contributed so far?",
+  "description": "Frontend Engineer with 10+ years of experience leading teams, building projects from scratch to production, and delivering optimized, scalable solutions. Experienced in technical architecture, UI/UX strategy, and modern web technologies including React JS, Vue JS, Node JS, JavaScript, TypeScript, HTML, and CSS. Proven track record of direct customer engagement, requirement analysis, and live project management. Recognized multiple times for outstanding contributions and excellence in client delivery.",
+  "organizations": [
+    {
+      "image": "photon.jpg",
+      "organizationName": "Photon interactive",
+      "startDate": "Oct 2025",
+      "endDate": "",
+      "location": "Bengaluru, Karnataka, India",
+      "professionalSummary": "Strategic technical leader specializing in scalable, high-performance frontend architectures for the global travel industry. Expert in React and headless Adobe Experience Manager (AEM) integrations, delivering multi-tenant platforms for global partners such as Air New Zealand and Wyndham. Proven ability to design reusable component libraries that accelerate delivery, ensure consistency, and support complex international booking experiences. Core Responsibilities & Achievements: **Architectural Leadership:** Spearheaded the design and development of a scalable React frontend integrated with Java Spring Boot microservices using a headless AEM architecture. **Modular Component Design:** Engineered a reusable React component library leveraging AEM SPA Mapping, enabling rapid configuration and deployment across multiple global partners. **Global Partner Onboarding:** Orchestrated technical onboarding for high-profile clients including Frontier and Air New Zealand, supporting custom tour plans and holiday packages via an API-as-a-Service model. **Complex Checkout Orchestration:** Led end-to-end development of a five-stage reservation funnel, integrating PayPal, credit card, and offline payment gateways. **AEM-Driven Business Logic:** Built a seamless bridge between AEM configurations and React business logic, empowering non-technical teams to manage offers and promotions globally without code changes. **Build & Dependency Management:** Optimized multi-tenant CI/CD workflows using Maven and NPM to maintain high code quality and deployment efficiency. **Revenue Systems Integration:** Integrated commission-based backend logic into frontend booking flows, ensuring accurate transactions for global holiday and tour services. **Technical Stack & Tools** Frontend: React.js, React-AEM-SPA Mapping, JavaScript (ES6+), NPM Backend & CMS: Java Spring Boot (Microservices), Adobe Experience Manager Tools & Integration: Maven, Git, RESTful API",
+      "isCurrent": true
+    },
+    {
+      "image": "oracle.jpg",
+      "organizationName": "Oracle",
+      "startDate": "Nov 2024",
+      "endDate": "Jul 2025",
+      "location": "Kolkata, West Bengal, India",
+      "professionalSummary": "1.Working as a web application developer and transforming legacy app into a next gen app. using cutting edge technologies. 2. Using UI builder - a drag and drop tool where you can drag and drop also can write ojet codes to develop UI components. 3. UI components much match oracle standards and color codes. 4. It basically has a model view controller structure and we use visual builder in vs code to develop UI components and functionalities. 5. UI functionalities and business logic lies into controller where we use js basically knockout js. 6. We as a team strictly follow agile methodology as well as sprint is maintained by scrum master(s). 7. Also working on selegen automation testing using builder and eclipse IDE. For page component testing and also doing functional testings as well.",
+      "isCurrent": false
+    },
+    {
+      "image": "ltimindtree.jpg",
+      "organizationName": "LtiMindtree",
+      "startDate": "May 2022",
+      "endDate": "Oct 2024",
+      "location": "Kolkata, West Bengal, India",
+      "professionalSummary": "1. Working a senior system engineer in banking and finance domain. My job role majorly covers coding, unit testing, code reviewing which strictly follow agile methodology. 2. Basically we as a frontend senior developer we use React js, client developed react compatible UI library, jest-cucumber for unit testing (enzyme) and sonar lint for best practices. 3. As a senior dev I am also involved in code review which includes less cognitive complexity, no use of let type if the variable is never getting updated, best practices and absolutely 100% arrow functions and Es6. Also code complexity reducing and use most deadly 1 liner ES6 features in code which makes it next gen. 4. We often use github copilot as An AI tool to perform multiple operations like generating test cases. Best practices code block generating, initiating component with all dependency at once. 5. I have also worked as a lead UI developer in client developed (not open source) CRM and many other stuffs. 6. Such a challenging and interesting journey till date. Unlike other MNCs LTIMindtree has lot to offer in terms of project development.",
+      "isCurrent": false
+    }
+  ]
+}

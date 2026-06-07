@@ -1,0 +1,21 @@
+{
+  "component": "navigationMenu",
+  "menuOptions": [
+    {
+      "id": "#home",
+      "value": "Home"
+    },
+    {
+      "id": "#about",
+      "value": "About"
+    },
+    {
+      "id": "#projects",
+      "value": "Projects"
+    },
+    {
+      "id": "#contact",
+      "value": "Contact"
+    }
+  ]
+}

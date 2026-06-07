@@ -3,8 +3,16 @@ import Image from 'next/image'
 
 import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
+import HomeContentService from '@/services/homeContent.service'
 
 export default function HomeSection() {
+  const {
+    greetingText,
+    authorName,
+    description,
+    heroFeatureBtn: heroBtnOptions,
+    role,
+  } = HomeContentService()
   return (
     <section id="home" className="min-h-auto scroll-mt-20 flex items-center">
       <div className="container mx-auto my-8 px-4 sm:px-6 md:px-8">
@@ -15,32 +23,34 @@ export default function HomeSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="mb-2 text-lg text-muted-foreground">Hello, I'm</p>
+            <p className="mb-2 text-lg text-muted-foreground">{greetingText}</p>
 
             <h1 className="mb-4 text-3xl sm:text-5xl md:text-7xl font-bold">
-              Subhankar Roy
+              {authorName}
             </h1>
             <TypeAnimation
-              sequence={['Frontend Developer', 2000]}
+              sequence={[role, 2000]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
               className="mb-6 text-xl sm:text-2xl md:text-3xl text-primary"
             />
 
-            <p className="mb-8 max-w-xl text-muted-foreground">
-              I build modern web applications using React, Next.js, TypeScript,
-              and Tailwind CSS.
+            <p className="mb-8 mt-4 max-w-xl text-muted-foreground">
+              {description}
             </p>
 
             <div className="flex gap-2 sm:gap-4 flex-wrap">
-              <button className="rounded-md bg-primary px-4 sm:px-6 py-2 sm:py-3 text-primary-foreground text-sm sm:text-base">
-                Contact Me
-              </button>
-
-              <button className="rounded-md border px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base">
-                Resume
-              </button>
+              {heroBtnOptions?.map((btnText, i) => {
+                return (
+                  <button
+                    key={i + 1}
+                    className={`${i === 0 ? 'rounded-md bg-primary px-4 sm:px-6 py-2 sm:py-3 text-primary-foreground text-sm sm:text-base' : 'rounded-md border px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base'}`}
+                  >
+                    {btnText}
+                  </button>
+                )
+              })}
             </div>
           </motion.div>
           {/* Right Side */}

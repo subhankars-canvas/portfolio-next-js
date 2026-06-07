@@ -1,0 +1,8 @@
+{
+  "component": "homeContent",
+  "greetingText": "Hello, I'm",
+  "authorName": "Subhankar Roy",
+  "role": "Fullstack web developer",
+  "description": "I build modern web applications using React Js, Next Js, Nest Js(Node Js Framework), HTML5, CSS3, Vanilla JavaScript, Tailwind CSS and many more.",
+  "heroFeatureBtn": ["Contact me", "Resume"]
+}
