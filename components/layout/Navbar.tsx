@@ -12,6 +12,7 @@ import NavigationContentService from '@/services/navigationContent.service'
 
 export default function Navbar() {
   const { menuOptions } = NavigationContentService()
+  console.log(menuOptions)
   return (
     <header className="fixed top-0 h-16 left-0 right-0 z-50 border-b bg-background/95 backdrop-blur">
       <div className="container mx-auto flex h-16 items-center justify-between">
