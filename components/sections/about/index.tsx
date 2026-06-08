@@ -1,14 +1,18 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import AboutContentService from '@/services/aboutContent.service'
+import DialogBox from '@/components/sections/sub-sections/dialog-box'
 
 export default function About() {
   const { heading, description, organizations } = AboutContentService()
+  const [open, setOpen] = useState(false)
+  const [orgData, setOrgData] = useState({})
   const getProfessionalSummaryShort = (longProfessionalSummary: string) => {
     if (longProfessionalSummary) {
       if (longProfessionalSummary?.length > 150) {
@@ -36,6 +40,7 @@ export default function About() {
           <p className="text-center mt-6">{description}</p>
         </div>
         <hr className="my-6 border-t border-gray-200 dark:border-white/10" />
+        <DialogBox open={open} setOpen={setOpen} orgData={orgData} />
         <div className="flex justify-center flex-wrap gap-4 sm:gap-6 md:gap-8">
           {organizations?.map((org, i) => {
             return (
@@ -90,7 +95,13 @@ export default function About() {
                   )}
 
                   {/* Button */}
-                  <Button className="w-full cursor-pointer">
+                  <Button
+                    className="w-full cursor-pointer"
+                    onClick={() => {
+                      setOpen(true)
+                      setOrgData(org)
+                    }}
+                  >
                     Show More Details
                   </Button>
                 </CardContent>

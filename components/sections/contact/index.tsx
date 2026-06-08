@@ -48,8 +48,8 @@ export default function Contact() {
                 src={`/assets/${leftSubHeadingCountryIcon}`}
                 alt="Indian Flag"
                 width={16}
-                height={16}
-                className="inline-block mx-2 w-4 h-3"
+                height={12}
+                className="inline-block mx-2"
               />
             </div>
             <p className="mt-4">{leftDescription}</p>
@@ -61,13 +61,20 @@ export default function Contact() {
             <div className="mt-4">
               {RightConnectMediums?.map((medium, i) => {
                 return (
-                  <Item key={i + 1}>
-                    <ItemMedia variant="icon">
-                      {getMediumIcon(medium?.icon)}
-                    </ItemMedia>
-                    <ItemContent>
-                      <ItemTitle>{medium?.message}</ItemTitle>
-                    </ItemContent>
+                  <Item asChild key={i + 1}>
+                    <a
+                      href={medium?.externalLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="connect-media-anchors"
+                    >
+                      <ItemMedia variant="icon">
+                        {getMediumIcon(medium?.icon)}
+                      </ItemMedia>
+                      <ItemContent>
+                        <ItemTitle>{medium?.message}</ItemTitle>
+                      </ItemContent>
+                    </a>
                   </Item>
                 )
               })}
@@ -93,13 +100,15 @@ export default function Contact() {
           </div>
           <div className="flex flex-1 justify-end flex-wrap md:flex-nowrap">
             <Link
-              href="#tnc"
+              href="other/tnc.pdf"
+              target="_blank"
               className="px-2 mx-2 text-sm text-muted-foreground leading-relaxed"
             >
               {termsLabel}
             </Link>
             <Link
-              href="#privacy"
+              href="other/policy.pdf"
+              target="_blank"
               className="px-2 mx-2 text-sm text-muted-foreground leading-relaxed"
             >
               {privacyLabel}

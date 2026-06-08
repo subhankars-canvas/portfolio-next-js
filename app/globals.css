@@ -140,4 +140,10 @@
   #contact {
     @apply bg-foreground text-background;
   }
+  .connect-media-anchors:hover {
+    color: oklch(0.145 0 0) !important;
+  }
+  button {
+    cursor: pointer !important;
+  }
 }

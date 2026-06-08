@@ -6,10 +6,26 @@
   "leftDescription": "I help businesses build scalable, user-focused digital products through modern web technologies and AI-driven innovation. With 10+ years of experience in full-stack development and 5+ years of engineering leadership, I specialize in React.js, Node.js, JavaScript, and delivering high-quality products in Agile environments.",
   "RightConnectString": "Let's connect",
   "RightConnectMediums": [
-    { "icon": "Mail", "message": "Email" },
-    { "icon": "FileUser", "message": "Resume" },
-    { "icon": "UserRound", "message": "LinkedIn" },
-    { "icon": "UserRound", "message": "GitHub" }
+    {
+      "icon": "Mail",
+      "message": "Email",
+      "externalLink": "mailto:roysubho687@gmail.com"
+    },
+    {
+      "icon": "FileUser",
+      "message": "Resume",
+      "externalLink": "resume/resume.pdf"
+    },
+    {
+      "icon": "UserRound",
+      "message": "LinkedIn",
+      "externalLink": "https://www.linkedin.com/in/uisubho/"
+    },
+    {
+      "icon": "UserRound",
+      "message": "GitHub",
+      "externalLink": "https://github.com/subhankars-canvas"
+    }
   ],
   "copyrightSectionHeading": "2026 Subhankar Roy. All rights reserved.",
   "effortStacks": "Built with &#x2764;&#xFE0F; and Next Js(UI & BFF), Shadcn/UI(UI components), Tailwind CSS, Nest Js(API) over a weekend.",

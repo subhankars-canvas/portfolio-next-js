@@ -42,7 +42,9 @@ export default function Navbar() {
                       asChild
                       className={navigationMenuTriggerStyle()}
                     >
-                      <Link href={`#${item?.id}`}>{item?.value}</Link>
+                      <Link href={`#${item?.id}`} className="active">
+                        {item?.value}
+                      </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 )

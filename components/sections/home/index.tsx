@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
 import HomeContentService from '@/services/homeContent.service'
+import Link from 'next/link'
 
 export default function HomeSection() {
   const {
@@ -47,7 +48,15 @@ export default function HomeSection() {
                     key={i + 1}
                     className={`${i === 0 ? 'rounded-md bg-primary px-4 sm:px-6 py-2 sm:py-3 text-primary-foreground text-sm sm:text-base' : 'rounded-md border px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base'}`}
                   >
-                    {btnText}
+                    <Link
+                      href={
+                        btnText === 'Resume' ? 'resume/resume.pdf' : '#contact'
+                      }
+                      target={btnText === 'Resume' ? '_blank' : ''}
+                      rel="noopener noreferrer"
+                    >
+                      {btnText}
+                    </Link>
                   </button>
                 )
               })}

@@ -6,6 +6,8 @@
     {
       "image": "photon.jpg",
       "organizationName": "Photon interactive",
+      "jobRole": "Technical Lead",
+      "employmentType": "Full-Time",
       "startDate": "Oct 2025",
       "endDate": "",
       "location": "Bengaluru, Karnataka, India",
@@ -15,19 +17,23 @@
     {
       "image": "oracle.jpg",
       "organizationName": "Oracle",
+      "jobRole": "Senior Member of Technical Staff",
+      "employmentType": "Full-Time",
       "startDate": "Nov 2024",
       "endDate": "Jul 2025",
       "location": "Kolkata, West Bengal, India",
-      "professionalSummary": "1.Working as a web application developer and transforming legacy app into a next gen app. using cutting edge technologies. 2. Using UI builder - a drag and drop tool where you can drag and drop also can write ojet codes to develop UI components. 3. UI components much match oracle standards and color codes. 4. It basically has a model view controller structure and we use visual builder in vs code to develop UI components and functionalities. 5. UI functionalities and business logic lies into controller where we use js basically knockout js. 6. We as a team strictly follow agile methodology as well as sprint is maintained by scrum master(s). 7. Also working on selegen automation testing using builder and eclipse IDE. For page component testing and also doing functional testings as well.",
+      "professionalSummary": "Working as a web application developer, transforming legacy applications into next-generation applications using cutting-edge technologies. Using UI Builder, a drag-and-drop development tool that allows developers to build UI components visually as well as write Oracle JET code for custom functionality. Ensuring UI components adhere to Oracle design standards, guidelines, and color schemes. Working with an MVC (Model-View-Controller) architecture and using Visual Builder within VS Code to develop UI components and implement business functionalities. Developing UI functionality and business logic primarily in the controller layer using JavaScript and Knockout.js. Collaborating within an Agile environment, following Scrum practices with sprint planning, daily stand-ups, and sprint tracking managed by Scrum Masters. Performing Selenium-based automation testing using Selenium Builder and Eclipse IDE for page component validation, functional testing, and quality assurance",
       "isCurrent": false
     },
     {
       "image": "ltimindtree.jpg",
       "organizationName": "LtiMindtree",
+      "jobRole": "Senior software Engineer",
+      "employmentType": "Full-Time",
       "startDate": "May 2022",
       "endDate": "Oct 2024",
       "location": "Kolkata, West Bengal, India",
-      "professionalSummary": "1. Working a senior system engineer in banking and finance domain. My job role majorly covers coding, unit testing, code reviewing which strictly follow agile methodology. 2. Basically we as a frontend senior developer we use React js, client developed react compatible UI library, jest-cucumber for unit testing (enzyme) and sonar lint for best practices. 3. As a senior dev I am also involved in code review which includes less cognitive complexity, no use of let type if the variable is never getting updated, best practices and absolutely 100% arrow functions and Es6. Also code complexity reducing and use most deadly 1 liner ES6 features in code which makes it next gen. 4. We often use github copilot as An AI tool to perform multiple operations like generating test cases. Best practices code block generating, initiating component with all dependency at once. 5. I have also worked as a lead UI developer in client developed (not open source) CRM and many other stuffs. 6. Such a challenging and interesting journey till date. Unlike other MNCs LTIMindtree has lot to offer in terms of project development.",
+      "professionalSummary": "Working as a Senior System Engineer in the Banking and Financial Services domain, with responsibilities including application development, unit testing, code reviews, and adherence to Agile development practices. Developing modern frontend applications using React.js, a client-developed React-compatible UI library, Jest-Cucumber with Enzyme for unit testing, and SonarLint to ensure code quality and best practices. Actively participating in code reviews, focusing on maintainability, reduced cognitive complexity, adherence to ES6+ standards, extensive use of arrow functions, code optimization, and modern JavaScript patterns to deliver scalable and efficient solutions. Leveraging AI-powered development tools such as GitHub Copilot to accelerate development workflows, generate test cases, scaffold components, and improve overall developer productivity. Contributed as a Lead UI Developer for a proprietary CRM platform and other enterprise-grade applications, delivering high-quality user interfaces and collaborating closely with cross-functional teams. Gained extensive experience working on complex enterprise projects, continuously enhancing technical expertise while contributing to innovative and impactful solutions",
       "isCurrent": false
     }
   ]
