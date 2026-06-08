@@ -2,19 +2,19 @@
   "component": "navigationMenu",
   "menuOptions": [
     {
-      "id": "#home",
+      "id": "",
       "value": "Home"
     },
     {
-      "id": "#about",
+      "id": "about",
       "value": "About"
     },
     {
-      "id": "#projects",
+      "id": "projects",
       "value": "Projects"
     },
     {
-      "id": "#contact",
+      "id": "contact",
       "value": "Contact"
     }
   ]

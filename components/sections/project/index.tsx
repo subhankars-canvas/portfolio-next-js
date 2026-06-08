@@ -17,7 +17,7 @@ export default function Project() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
       className="min-h-auto scroll py-8"
-      id="project"
+      id="projects"
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <div className="flex justify-center flex-wrap">

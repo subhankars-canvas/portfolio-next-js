@@ -8,8 +8,10 @@ import {
 } from '@/components/ui/navigation-menu'
 import { MobileNav } from './MobileNav'
 import Image from 'next/image'
+import NavigationContentService from '@/services/navigationContent.service'
 
 export default function Navbar() {
+  const { menuOptions } = NavigationContentService()
   return (
     <header className="fixed top-0 h-16 left-0 right-0 z-50 border-b bg-background/95 backdrop-blur">
       <div className="container mx-auto flex h-16 items-center justify-between">
@@ -32,41 +34,18 @@ export default function Navbar() {
         <div className="hidden md:block">
           <NavigationMenu>
             <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  asChild
-                  className={navigationMenuTriggerStyle()}
-                >
-                  <Link href="/">Home</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  asChild
-                  className={navigationMenuTriggerStyle()}
-                >
-                  <Link href="#about">About</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  asChild
-                  className={navigationMenuTriggerStyle()}
-                >
-                  <Link href="#project">Projects</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  asChild
-                  className={navigationMenuTriggerStyle()}
-                >
-                  <Link href="#contact">Contact</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
+              {menuOptions?.map((item, i) => {
+                return (
+                  <NavigationMenuItem key={i + 1}>
+                    <NavigationMenuLink
+                      asChild
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      <Link href={`#${item?.id}`}>{item?.value}</Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                )
+              })}
             </NavigationMenuList>
           </NavigationMenu>
         </div>
