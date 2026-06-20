@@ -16,7 +16,7 @@ export default function About() {
   const getProfessionalSummaryShort = (longProfessionalSummary: string) => {
     if (longProfessionalSummary) {
       if (longProfessionalSummary?.length > 150) {
-        return longProfessionalSummary.slice(0, 150)
+        return longProfessionalSummary.slice(0, 210)
       } else {
         return longProfessionalSummary
       }
@@ -88,9 +88,7 @@ export default function About() {
                     .length > 0 && (
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {getProfessionalSummaryShort(org?.professionalSummary)}
-                      <span className="font-semibold">
-                        .To learn more click on the button below.
-                      </span>
+                      <span className="font-semibold">...</span>
                     </p>
                   )}
 

@@ -73,7 +73,7 @@ export default function HomeSection() {
               {/* MAIN IMAGE (center layer) */}
               <div className="relative w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px]">
                 <Image
-                  src="/assets/developer-illustration.webp"
+                  src="/assets/hero.png"
                   alt="Developer Illustration"
                   fill
                   priority
